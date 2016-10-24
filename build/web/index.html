@@ -5,38 +5,51 @@ To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
 <html>
-  <head>
-    <title>Beer Selection</title>
-  </head>
-  <body>
-    <h1 align="center">Beer Selection Page</h1>
-    <form method="POST" action="SelectBeer.do">
-        <center>
-      Select beer characteristics:<p>
-      Color:
-        
-      <select name="color" size="1">
-        <option>yellow</option>
-        <option>amber</option>
-        <option>brown</option>
-        <option>dark</option>
-      </select>
-      <br>
-      <br>
-      
-      Country:
-        
-      <select name="country" size="1">
-        <option>Greek</option>
-        <option>non-Greek</option>
+    <head>
+        <title>Beer Selection</title>
+    </head>
+    <body>
+       <h1 align="center">Beer Selection Page</h1>
+        <form method="POST" action="SelectBeer.do">
+            <center>
+                Select beer characteristics:<p>
+                    Color:
 
-      </select>
-      <br>
-      <br>
-      
-      
-        <input type="SUBMIT">
-      </center>
-    </form>	
-     </body>
+                    <select name="color" size="1">
+                        <option>yellow</option>
+                        <option>amber</option>
+                        <option>brown</option>
+                        <option>dark</option>
+                    </select>
+                    <br>
+                    <br>
+
+                    Country:
+
+                    <select name="country" size="1">
+                        <option>Greek</option>
+                        <option>non-Greek</option>
+
+                    </select>
+                    <br>
+                    <br>
+
+
+                    <input type="SUBMIT">
+            </center>
+        </form>
+        
+        <div class="form">
+             <form method="POST" action="Login.do" >
+            <label><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" name="uname" required>
+
+            <label><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+
+            <button type="submit">Login</button>
+             </form>
+        </div>
+
+    </body>
 </html>

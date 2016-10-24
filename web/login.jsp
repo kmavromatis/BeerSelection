@@ -1,14 +1,27 @@
+<%-- 
+    Document   : result
+    Created on : Oct 11, 2016, 8:39:37 PM
+    Author     : user
+--%>
+
+<%@page import="java.util.*"%>
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
 <html>
     <head>
-        <title>Beer Selection</title>
+        
+        <title>Beers select</title>
     </head>
     <body>
+        
+        <p>
+            
+            <%
+                List info = (List)request.getAttribute("info");
+                out.print("Hello,"+info.get(0)+" ("+info.get(1)+") ,born in "+info.get(2)+"\n");
+                int sessions = (Integer)request.getAttribute("sessions");
+                out.println("There are "+sessions+" active sessions");
+                %>    
+        
        <h1 align="center">Beer Selection Page</h1>
         <form method="POST" action="SelectBeer.do">
             <center>
@@ -38,18 +51,5 @@ and open the template in the editor.
                     <input type="SUBMIT">
             </center>
         </form>
-        
-        <div class="form">
-             <form method="POST" action="Login.do" >
-            <label><b>Username</b></label>
-            <input type="text" placeholder="Enter Username" name="uname" required>
-
-            <label><b>Password</b></label>
-            <input type="password" placeholder="Enter Password" name="psw" required>
-
-            <button type="submit">Login</button>
-             </form>
-        </div>
-
     </body>
 </html>
